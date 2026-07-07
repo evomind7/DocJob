@@ -1,0 +1,17 @@
+[build]
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/pagamento/criar"
+  to = "/.netlify/functions/pagamento-criar"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/pagamento/status"
+  to = "/.netlify/functions/pagamento-status"
+  status = 200
+  force = true
